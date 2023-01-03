@@ -63,8 +63,7 @@ public class AccountController {
 
         }
 
-        account.setEmailVerifed(true);
-        account.setJoinedAt(LocalDateTime.now());
+        account.completeSignUp();
         model.addAttribute("numberOfUser", accountRepository.count());
         model.addAttribute("nickname", account.getNickname());
         return view;
