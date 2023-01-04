@@ -22,7 +22,7 @@ public class Account {
 
     private String password;
 
-    private boolean emailVerifed;
+    private boolean emailVerified;
 
     private String emailCheckToken;
 
@@ -51,7 +51,11 @@ public class Account {
     }
 
     public void completeSignUp() {
-        this.emailVerifed = true;
+        this.emailVerified = true;
         this.joinedAt = LocalDateTime.now();
+    }
+
+    public boolean isValidToken(String token) {
+        return this.emailCheckToken.equals(token);
     }
 }
