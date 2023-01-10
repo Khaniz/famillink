@@ -22,7 +22,7 @@ public class SecurityConfig {
      public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.authorizeRequests().mvcMatchers(
                 "/", "/login", "/sign-up",
-                "/check-email", "/check-email-token",
+                "/check-email-token",
                 "email-login", "/check-email-login",
                 "/login-link"
                 ).permitAll()

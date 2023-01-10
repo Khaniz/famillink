@@ -42,7 +42,7 @@ public class AccountService {
         return accountRepository.save(account);
     }
 
-    private void sendSignedUpConfirmEmail(Account newAccount) {
+    public void sendSignedUpConfirmEmail(Account newAccount) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo(newAccount.getEmail());
         mailMessage.setSubject("Familink 회원가입 인증");
