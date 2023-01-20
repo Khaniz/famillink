@@ -9,6 +9,13 @@
             <div th:replace="fragments.html :: settings-menu(currentMenu='profile')"></div>
         </div>
         <div class="col-8">
+            <div th:if="${message}" class="alert alert-info alert-dismissible fade show mt-3" role="alert">
+                <span th:text="${message}"></span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+
             <div class="row">
                 <h2 class="col-sm-12" th:text="${account.nickname}">wisrule</h2>
             </div>
@@ -18,7 +25,7 @@
                     <div class="form-group">
                         <label for="bio">한 줄 소개</label>
                         <input id="bio" type="text" th:field="*{bio}" class="form-control"
-                               placeholder="간략한 소개를 부탁합니다." aria-describedby="bioHelp" required>
+                               placeholder="나는 누구인가." aria-describedby="bioHelp" required>
                         <small id="bioHelp" class="form-text text-muted">
                             길지 않게 35자 이내로 입력하세요.
                         </small>
@@ -30,7 +37,7 @@
                     <div class="form-group">
                         <label for="url">링크</label>
                         <input id="url" type="url" th:field="*{url}" class="form-control"
-                               placeholder="http://studyolle.com" aria-describedby="urlHelp" required>
+                               placeholder="http://familink.com" aria-describedby="urlHelp" required>
                         <small id="urlHelp" class="form-text text-muted">
                             블로그, 유튜브 또는 포트폴리오나 좋아하는 웹 사이트 등 본인을 표현할 수 있는 링크를 추가하세요.
                         </small>
@@ -44,14 +51,14 @@
                         <input id="company" type="text" th:field="*{occupation}" class="form-control"
                                placeholder="어떤 일을 하고 계신가요?" aria-describedby="occupationHelp" required>
                         <small id="occupationHelp" class="form-text text-muted">
-                            개발자? 매니저? 취준생? 대표님?
+                            프론트엔드, 백엔드, 풀스택, 자바, 파이썬, 고
                         </small>
                     </div>
 
                     <div class="form-group">
                         <label for="location">활동 지역</label>
                         <input id="location" type="text" th:field="*{location}" class="form-control"
-                               placeholder="Redmond, WA, USA"
+                               placeholder="서울 성북구 일대"
                                aria-describedby="locationdHelp" required>
                         <small id="locationdHelp" class="form-text text-muted">
                             주요 활동(사는 곳이나 직장을 다니는 곳 또는 놀러 다니는 곳) 지역의 도시 이름을 알려주세요.

@@ -1,6 +1,7 @@
 package com.famillink.famillink.account;
 
 import com.famillink.famillink.domain.Account;
+import com.famillink.famillink.settings.Profile;
 import lombok.RequiredArgsConstructor;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -86,5 +87,14 @@ public class AccountService implements UserDetailsService {
         account.completeSignUp();
         login(account);
 
+    }
+
+    public void updateProfile(Account account, Profile profile) {
+
+        account.setUrl(profile.getUrl());
+        account.setBio(profile.getBio());
+        account.setOccupation(profile.getOccupation());
+        account.setLocation(profile.getLocation());
+        accountRepository.save(account);
     }
 }

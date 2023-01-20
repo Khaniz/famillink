@@ -2,8 +2,10 @@ package com.famillink.famillink.settings;
 
 import com.famillink.famillink.domain.Account;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class Profile {
 
     private String bio;
