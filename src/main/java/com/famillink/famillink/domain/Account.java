@@ -40,11 +40,11 @@ public class Account{
     private String profileImage;
 
     private boolean familyCreatedByEmail;
-    private boolean familyCreatedByWeb;
+    private boolean familyCreatedByWeb = true;
     private boolean familyEnrollmentResultByEmail;
-    private boolean familyEnrollmentResultByWeb;
+    private boolean familyEnrollmentResultByWeb = true;
     private boolean familyUpdateByEmail;
-    private boolean familyUpdateByWeb;
+    private boolean familyUpdateByWeb = true;
     private LocalDateTime emailCheckTokenGeneratedAt;
 
     public void generateEmailCheckToken() {

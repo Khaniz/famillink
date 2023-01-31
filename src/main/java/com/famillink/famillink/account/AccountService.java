@@ -1,6 +1,7 @@
 package com.famillink.famillink.account;
 
 import com.famillink.famillink.domain.Account;
+import com.famillink.famillink.settings.Notifications;
 import com.famillink.famillink.settings.Profile;
 import lombok.RequiredArgsConstructor;
 import org.springframework.mail.SimpleMailMessage;
@@ -103,5 +104,16 @@ public class AccountService implements UserDetailsService {
         account.setPassword(passwordEncoder.encode(newPassword));
         accountRepository.save(account);
 
+    }
+
+
+    public void updateNotifications(Account account, Notifications notifications) {
+        account.setFamilyCreatedByWeb(notifications.isFamCreatedByWeb());
+        account.setFamilyCreatedByEmail(notifications.isFamCreatedByEmail());
+        account.setFamilyUpdateByWeb(notifications.isFamUpdatedByWeb());
+        account.setFamilyUpdateByWeb(notifications.isFamUpdatedByWeb());
+        account.setFamilyEnrollmentResultByWeb(notifications.isFamEnrollmentResultByWeb());
+        account.setFamilyEnrollmentResultByEmail(notifications.isFamEnrollmentResultByEmail());
+        accountRepository.save(account);
     }
 }
