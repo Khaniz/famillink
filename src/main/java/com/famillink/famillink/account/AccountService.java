@@ -118,6 +118,6 @@ public class AccountService implements UserDetailsService {
 //        account.setFamilyEnrollmentResultByWeb(notifications.isFamEnrollmentResultByWeb());
 //        account.setFamilyEnrollmentResultByEmail(notifications.isFamEnrollmentResultByEmail());
         modelMapper.map(notifications,account);
-        accountRepository.save(account);
+        accountRepository.save(account); //실제로 업데이트 반영 안됨;;
     }
 }
