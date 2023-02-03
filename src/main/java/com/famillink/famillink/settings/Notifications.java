@@ -9,21 +9,20 @@ import lombok.NoArgsConstructor;
 public class Notifications {
 
     public Notifications(Account account) {
-        this.famCreatedByEmail = account.isFamilyCreatedByEmail();
-        this.famCreatedByWeb = account.isFamilyCreatedByWeb();
-        this.famEnrollmentResultByEmail = account.isFamilyEnrollmentResultByEmail();
-        this.famEnrollmentResultByWeb = account.isFamilyEnrollmentResultByWeb();
-        this.famUpdatedByEmail = account.isFamilyUpdateByEmail();
-        this.famUpdatedByWeb = account.isFamilyUpdateByWeb();
+        this.familyCreatedByEmail = account.isFamilyCreatedByEmail();
+        this.familyCreatedByWeb = account.isFamilyCreatedByWeb();
+        this.familyEnrollmentResultByEmail = account.isFamilyEnrollmentResultByEmail();
+        this.familyEnrollmentResultByWeb = account.isFamilyEnrollmentResultByWeb();
+        this.familyUpdatedByEmail = account.isFamilyUpdateByEmail();
+        this.familyUpdatedByWeb = account.isFamilyUpdateByWeb();
     }
 
-    private boolean famCreatedByEmail;
-    private boolean famCreatedByWeb;
-    private boolean famEnrollmentResultByEmail;
-    private boolean famEnrollmentResultByWeb;
-    private boolean famUpdatedByEmail;
-    private boolean famUpdatedByWeb;
+    private boolean familyCreatedByEmail;
+    private boolean familyCreatedByWeb;
+    private boolean familyEnrollmentResultByEmail;
+    private boolean familyEnrollmentResultByWeb;
+    private boolean familyUpdatedByEmail;
+    private boolean familyUpdatedByWeb;
 
-
-
+    //mapper 사용을 위한 객체 이름 맞춰주기
 }
