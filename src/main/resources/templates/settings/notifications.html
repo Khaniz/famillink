@@ -16,6 +16,7 @@
                 </button>
             </div>
             <div class="row">
+
                 <h2 class="col-12">알림 설정</h2>
             </div>
             <div class="row mt-3" th:fragment="profile-form">
@@ -26,11 +27,11 @@
                     </div>
                     <div class="form-group">
                         <div class="custom-control custom-switch custom-control-inline">
-                            <input type="checkbox" th:field="*{famCreatedByEmail}" class="custom-control-input" id="famCreatedByEmail">
+                            <input type="checkbox" th:field="*{familyCreatedByEmail}" class="custom-control-input" id="famCreatedByEmail">
                             <label class="custom-control-label" for="famCreatedByEmail">이메일로 받기</label>
                         </div>
                         <div class="custom-control custom-switch custom-control-inline">
-                            <input type="checkbox" th:field="*{famCreatedByWeb}" class="custom-control-input" id="famCreatedByWeb">
+                            <input type="checkbox" th:field="*{familyCreatedByWeb}" class="custom-control-input" id="famCreatedByWeb">
                             <label class="custom-control-label" for="famCreatedByWeb">웹으로 받기</label>
                         </div>
                     </div>
@@ -39,11 +40,11 @@
                     </div>
                     <div class="form-group">
                         <div class="custom-control custom-switch custom-control-inline">
-                            <input type="checkbox" th:field="*{famEnrollmentResultByEmail}" class="custom-control-input" id="famEnrollmentResultByEmail">
+                            <input type="checkbox" th:field="*{familyEnrollmentResultByEmail}" class="custom-control-input" id="famEnrollmentResultByEmail">
                             <label class="custom-control-label" for="famEnrollmentResultByEmail">이메일로 받기</label>
                         </div>
                         <div class="custom-control custom-switch custom-control-inline">
-                            <input type="checkbox" th:field="*{famEnrollmentResultByWeb}" class="custom-control-input" id="famEnrollmentResultByWeb">
+                            <input type="checkbox" th:field="*{familyEnrollmentResultByWeb}" class="custom-control-input" id="famEnrollmentResultByWeb">
                             <label class="custom-control-label" for="famEnrollmentResultByWeb">웹으로 받기</label>
                         </div>
                     </div>
@@ -52,11 +53,11 @@
                     </div>
                     <div class="form-group">
                         <div class="custom-control custom-switch custom-control-inline">
-                            <input type="checkbox" th:field="*{famUpdatedByEmail}" class="custom-control-input" id="famUpdatedByEmail">
+                            <input type="checkbox" th:field="*{familyUpdatedByEmail}" class="custom-control-input" id="famUpdatedByEmail">
                             <label class="custom-control-label" for="famUpdatedByEmail">이메일로 받기</label>
                         </div>
                         <div class="custom-control custom-switch custom-control-inline">
-                            <input type="checkbox" th:field="*{famUpdatedByWeb}" class="custom-control-input" id="famUpdatedByWeb">
+                            <input type="checkbox" th:field="*{familyUpdatedByWeb}" class="custom-control-input" id="famUpdatedByWeb">
                             <label class="custom-control-label" for="famUpdatedByWeb">웹으로 받기</label>
                         </div>
                     </div>
